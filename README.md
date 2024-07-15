@@ -44,9 +44,9 @@ Este proyecto es una aplicación básica de notas creada con Ruby on Rails. A co
     rbenv rehash
     ```
 
-7. **Crear una nueva aplicación Rails**:
+7. **Clonar la aplicacion Rails**:
     ```bash
-    rails new notes-app
+    git clone https://github.com/grupopetsa/notes-app
     cd notes-app
     bundle install
     rails webpacker:install
