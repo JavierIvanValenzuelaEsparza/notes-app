@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: %i[ show edit update destroy ]
+  before_action :set_note, only: %i[show edit update destroy]
 
   def index
     @notes = Note.order(created_at: :desc)
@@ -8,8 +8,6 @@ class NotesController < ApplicationController
     if filters && filters[:title].present?
       @notes = @notes.search_by_title(filters[:title])
     end
-
-    @notes
   end
 
   def show

@@ -1,65 +1,112 @@
+/* General styles */
 body {
-  background-color: #fff;
+  background-color: #f5f5f5;
   color: #333;
-  margin: 33px; }
+  margin: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+p, ol, ul, td {
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.6;
+}
 
 pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px; }
+  background-color: #f0f0f0;
+  padding: 15px;
+  font-size: 13px;
+  border-radius: 5px;
+  overflow: auto;
+}
 
+/* Links */
 a {
-  color: #000; }
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
 
 a:visited {
-  color: #666; }
+  color: #0056b3;
+}
 
 a:hover {
-  color: #fff;
-  background-color: #000; }
+  color: #0056b3;
+  background-color: #e9ecef;
+  border-radius: 3px;
+}
+
+/* Tables */
+th, td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
 
 th {
-  padding-bottom: 5px; }
+  background-color: #f8f9fa;
+  text-align: left;
+}
 
 td {
-  padding: 0 5px 7px; }
+  background-color: #fff;
+}
 
+/* Form elements */
 div.field,
 div.actions {
-  margin-bottom: 10px; }
+  margin-bottom: 15px;
+}
 
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Notices and errors */
 #notice {
-  color: green; }
+  color: green;
+  font-weight: bold;
+}
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
+  padding: 5px;
+  background-color: #ffdddd;
+  display: table;
+  border-radius: 5px;
+}
 
 #error_explanation {
-  width: 450px;
+  width: 100%;
+  max-width: 600px;
   border: 2px solid red;
-  padding: 7px 7px 0;
+  padding: 15px;
   margin-bottom: 20px;
-  background-color: #f0f0f0; }
+  background-color: #f8d7da;
+  border-radius: 5px;
+}
 
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px -7px 0;
-  background-color: #c00;
-  color: #fff; }
+  padding: 10px;
+  font-size: 16px;
+  margin: -15px -15px 0;
+  background-color: #c82333;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#error_explanation ul {
+  padding: 15px;
+  list-style: square;
+}
 
 #error_explanation ul li {
-  font-size: 12px;
-  list-style: square; }
-
-label {
-  display: block; }
+  font-size: 14px;
+  margin-bottom: 5px;
+}

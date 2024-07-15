@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My note collection</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NotesApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <%= csp_meta_tag %>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      
+      .navbar-fixed {
+        background-color: #007bff;
+        color: #fff;
+      }
+      
+      .nav-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+      
+      .brand-logo {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5em;
+        text-decoration: none;
+      }
+      
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: red;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+      
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #F44336;
+        text-align: center;
+        padding: 20px 0;
+      }
+      
+      html {
+        min-height: 100%;
+        position: relative;
+      }
+      
+      body {
+        margin: 0;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
 
   <body>
-   <div class="navbar-fixed">
+    <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <%= link_to notes_path, class: 'brand-logo center' do %>
-            My note collection
+          <%= link_to notes_path, class: 'brand-logo' do %>
+            NotesApp
           <% end %>
         </div>
       </nav>
@@ -24,5 +91,9 @@
     <div class="container">
       <%= yield %>
     </div>
+
+    <footer>
+      <p>&copy; <%= Date.today.year %> NotesApp. All rights reserved.</p>
+    </footer>
   </body>
 </html>
